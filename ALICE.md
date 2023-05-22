@@ -95,7 +95,7 @@ Add .env to your gitignore.
 Update settings
 Go to settings.py, add import environ:
 
-# settings.py
+... **settings.py**
 
 import environ
 After your imports, add the following line. This will read the values in the .env file.
@@ -107,14 +107,19 @@ environ.Env.read_env()
 
 SECRET_KEY = env(‘SECRET_KEY’)
 ```
+4. **Create a Django Project**
 
-4. **Test the server runs**
+   django-admin startproject mysite .
+
+5. **Test the server runs**
 ```
 python manage.py runserver
 ```
 
-5. **Migrate**
+6. **Run Migrations**
 ```
+python manage.py makemigrations
+
 python manage.py migrate
 ```
 
